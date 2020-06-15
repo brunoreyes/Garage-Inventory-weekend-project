@@ -1,6 +1,6 @@
 let garage = [];
 $(document).ready(readyNow);
-const maxSpots = 3;
+const maxSpots = 4;
 
 function newCar(pictureInput, priceInput, yearInput, makeInput, modelInput) {
   console.log('in newCar:', pictureInput, priceInput, yearInput, makeInput, modelInput);
@@ -22,6 +22,8 @@ function newCar(pictureInput, priceInput, yearInput, makeInput, modelInput) {
 console.log(`----------newCar() Test----------`);
 console.log(garage);
 console.log(newCar('https://tinyurl.com/y7vad5hd', 24000, 2019, 'Nissan', 'Altima'));
+console.log(newCar('https://tinyurl.com/yamxsc5j', 19850, 2020, 'Honda', 'Civic'));
+console.log(newCar('https://tinyurl.com/y7prevuq', 10000, 2017, 'Toyota', 'Corolla'));
 console.log(garage);
 
 function addCar() {
@@ -33,11 +35,21 @@ function addCar() {
   $('#makeInput').val('')
   $('#modelInput').val('')
   displayGarageCars();
+  var selectedEffect = $("#effectTypes").val();
+  var options = {};
+  // some effects have required parameters
+  if (selectedEffect === "scale") {
+    options = { percent: 50 };
+  } else if (selectedEffect === "transfer") {
+    options = { to: "#button", className: "ui-effects-transfer" };
+  } else if (selectedEffect === "size") {
+    options = { to: { width: 200, height: 60 } };
+  }
 }// end addCar
 
 function displayGarageCars() {
   let el = $('#carsOutput');
-  let parkingSpots = (maxSpots - garage.length);
+  // let parkingSpots = (maxSpots - garage.length);
   //Here I'm targeting id: carsOutput
   el.empty();
   //empty out id: carsOutput
@@ -64,6 +76,7 @@ function readyNow() {
   //when id: addPurchaseButton is clicked we addCar
   //addCar is 
   displayGarageCars();
+
 };//end readyNow
 
 $('input').keyup(function () {
@@ -81,7 +94,7 @@ $('input').keyup(function () {
   });
   if (empty) {
     $('#addCarButton').attr('disabled', 'disabled');
-    $('#formError').text('* Please fill out <span class="errorRed"> all </span> sections')
+    $('#formError').text('* Please fill out all sections to park car')
   }
   else if (garage.length < 1) {
     $('#parkingSpotsNumber').number(10);
@@ -102,13 +115,16 @@ function disableForm() {
     $('#yearInput').val('').attr('disabled', 'disabled');
     $('#makeInput').val('').attr('disabled', 'disabled');
     $('#modelInput').val('').attr('disabled', 'disabled');
-    $('#parkingError').text(`* Garage has reached maximum capacity, please try again later`)
-    document.getElementById("parkingError").style.color = 'red'
+    $('#parkingError').text(`* Garage has reached maximum capacity, please try parking later`)
+    // document.getElementById("parkingError").style.color = 'red'
     $('#addCarButton').attr('disabled', 'disabled');
   }
 }// end disableForm
 
 function totalPrice() {
-
+  let totalValue = 0;
+  for (car of garage) {
+    totalValue += car.price;
+  }
+  $('#totalCarCost').text(`$${totalValue}`);
 }//end totalPrice
-

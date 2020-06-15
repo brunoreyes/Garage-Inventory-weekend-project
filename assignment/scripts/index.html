@@ -12,7 +12,7 @@
   </div>
   <div id="allThingsCarContainer">
     <div id="formContainer">
-      <h3 id="FormTitle">Park Car</h3>
+      <h2 id="formTitle">Park Car</h2>
       <input type="url" placeholder="Image Url" id="imageUrlInput">
       <input type="number" placeholder="Price" id="priceInput">
       <input type="text" placeholder="Year" id="yearInput">
@@ -26,14 +26,16 @@
       <h3 id="ratio">
         <span id="parkedCarSide">Parked Cars <span id="parkedCarsNumber"></span></span> /
         <span id="maxCapacitySide"> <span id="maxCapacityNumber"></span> Max Capacity </span>
-        <span id=space></span>Total Cost: <span id="totalCarCost"></span>
+        <span id=space></span> <span id=totalCostGreen> Total Cost : <span id="totalCarCost"></span></span>
       </h3>
     </div>
-    <ul id="carsOutput">
+    <h3 id="inventoryListTitle">Inventory List</h3>
+    <ul id="carsOutput" class="element">
     </ul>
   </div>
 </body>
 <script src="jQuery.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="client.js" charset="utf-8"></script>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
