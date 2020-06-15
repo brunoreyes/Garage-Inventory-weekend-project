@@ -3,24 +3,37 @@
 
 <head>
   <meta charset="utf-8">
-
   <title>Week 6 Tier 1 Assignment</title>
 </head>
 
 <body>
-  <h1>Week 6 Tier 1 Assignment</h1>
-  <input type="text" placeholder="Year" id="yearInput">
-  <input type="text" placeholder="Make" id="makeInput">
-  <input type="text" placeholder="Model" id="modelInput">
-  <button id="addCarButton">Add Car</button>
-  <h3>Cars in Garage</h3>
-  <ul id="carsOutput">
-    <li>Year, Make, Model</li>
-  </ul>
-
+  <div id="header">
+    <h1>Week 6 Tier 1 Assignment</h1>
+  </div>
+  <div id="allThingsCarContainer">
+    <div id="formContainer">
+      <h3 id="FormTitle">Park Car</h3>
+      <input type="url" placeholder="Image Url" id="imageUrlInput">
+      <input type="number" placeholder="Price" id="priceInput">
+      <input type="text" placeholder="Year" id="yearInput">
+      <input type="text" placeholder="Make" id="makeInput">
+      <input type="text" placeholder="Model" id="modelInput">
+      <button id="addCarButton" disabled="disabled">Add Car</button>
+      <p id="formError" class="error"></p>
+      <p id="parkingError" class="error"></p>
+    </div>
+    <div id="parkedCarsAndMaxCapacity">
+      <h3 id="ratio">
+        <span id="parkedCarSide">Parked Cars <span id="parkedCarsNumber"></span></span> /
+        <span id="maxCapacitySide"> <span id="maxCapacityNumber"></span> Max Capacity </span>
+        <span id=space></span>Total Cost: <span id="totalCarCost"></span>
+      </h3>
+    </div>
+    <ul id="carsOutput">
+    </ul>
+  </div>
 </body>
 <script src="jQuery.js"></script>
 <script src="client.js" charset="utf-8"></script>
 <link rel="stylesheet" href="style.css">
-
-</html>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">

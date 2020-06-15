@@ -1,0 +1,82 @@
+html { 
+    background: url("https://tinyurl.com/yacwo7ya") no-repeat center center fixed; 
+    background-size: cover;
+}
+body{
+    font-family: 'Oswald', sans-serif;    
+}
+#header {
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+    text-align: center;
+    /* position: fixed; */
+}
+#allThingsCarContainer {
+    /* background: white;
+    opacity: .7; */
+    
+    border-radius: 10px;
+    padding: 32px;
+    width: 60%;
+    margin: auto;
+}
+#formContainer{
+    text-align: center;
+}
+#addCarButton {
+    margin-top: 5px;
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    color: #000000;
+    border-radius: 5px;
+}
+input {
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    border-radius: 5px;
+}
+.errorRed {
+    color: red;
+}
+#parkedCarsAndMaxCapacity{
+    text-align: center;
+    border-radius: 5px;
+    border: solid  black 2px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background: white;
+   
+}
+
+#parkedCarSide {
+color: orange;
+}
+
+#maxCapacitySide {
+color:purple
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+#carsOutput {
+    color: white;
+}
+li{
+    background: white;
+    border-radius: 10px;
+    color: #000000;
+    margin: 10px ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 10px
+}
+ul {
+margin-left: 10px;}
+#money {
+    color: green;
+}
+#space {
+    margin-left: 10px;
+}
