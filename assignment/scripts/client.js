@@ -1,7 +1,6 @@
 let garage = [];
 $(document).ready(readyNow);
 const maxSpots = 4;
-
 function newCar(pictureInput, priceInput, yearInput, makeInput, modelInput) {
   console.log('in newCar:', pictureInput, priceInput, yearInput, makeInput, modelInput);
   const newCarObject = {
@@ -35,16 +34,6 @@ function addCar() {
   $('#makeInput').val('')
   $('#modelInput').val('')
   displayGarageCars();
-  var selectedEffect = $("#effectTypes").val();
-  var options = {};
-  // some effects have required parameters
-  if (selectedEffect === "scale") {
-    options = { percent: 50 };
-  } else if (selectedEffect === "transfer") {
-    options = { to: "#button", className: "ui-effects-transfer" };
-  } else if (selectedEffect === "size") {
-    options = { to: { width: 200, height: 60 } };
-  }
 }// end addCar
 
 function displayGarageCars() {
@@ -55,7 +44,7 @@ function displayGarageCars() {
   //empty out id: carsOutput
   for (parkedcar of garage) {
     //Can't use 'new' as a variable name so I used 'car' instead
-    el.append(`<li>` + `<img src = ` + parkedcar.picture + `></img>` + `<span id=space></span>` + ` ` + parkedcar.year + `<span id=space></span>` + ` ` + parkedcar.make + `<span id=space></span>` + ` ` + parkedcar.model + `<span id=space></span>` + ` ` + ` <span id="money">$` + parkedcar.price + `</span> </li>`);
+    el.append(`<li id="line">` + `<img src = ` + parkedcar.picture + `></img>` + `<span id=space></span>` + ` ` + parkedcar.year + `<span id=space></span>` + ` ` + parkedcar.make + `<span id=space></span>` + ` ` + parkedcar.model + `<span id=space></span>` + ` ` + ` <span id="money">$` + parkedcar.price + `</span> </li>`);
     // here I'm creating a list item (year, make, model) for each parkedcar
   }// end for 
   $('#parkedCarsNumber').text(garage.length)
@@ -73,10 +62,10 @@ function readyNow() {
   //With append I am inserting specified content at
   //the end of statements
   $('#addCarButton').on('click', addCar);
+  $('#addCarButton').on('click', animate);
   //when id: addPurchaseButton is clicked we addCar
   //addCar is 
   displayGarageCars();
-
 };//end readyNow
 
 $('input').keyup(function () {
@@ -94,7 +83,7 @@ $('input').keyup(function () {
   });
   if (empty) {
     $('#addCarButton').attr('disabled', 'disabled');
-    $('#formError').text('* Please fill out all sections to park car')
+    $('#formError').text('* Please fill out all sections to park car *')
   }
   else if (garage.length < 1) {
     $('#parkingSpotsNumber').number(10);
@@ -115,7 +104,7 @@ function disableForm() {
     $('#yearInput').val('').attr('disabled', 'disabled');
     $('#makeInput').val('').attr('disabled', 'disabled');
     $('#modelInput').val('').attr('disabled', 'disabled');
-    $('#parkingError').text(`* Garage has reached maximum capacity, please try parking later`)
+    $('#parkingError').text(`* The garage has reached maximum capacity *`)
     // document.getElementById("parkingError").style.color = 'red'
     $('#addCarButton').attr('disabled', 'disabled');
   }
@@ -128,3 +117,10 @@ function totalPrice() {
   }
   $('#totalCarCost').text(`$${totalValue}`);
 }//end totalPrice
+
+function animate() {
+  if (garage.length <= maxSpots) {
+    document.getElementById('carParkedNotice').classList.add('element');
+    $('#carParkedNotice').text('* Congratulations You Have Successfully Parked Your Car! *')
+  }
+}
