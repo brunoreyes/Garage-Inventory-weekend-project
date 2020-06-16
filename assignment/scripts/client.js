@@ -104,7 +104,6 @@ function disableForm() {
     $('#yearInput').val('').attr('disabled', 'disabled');
     $('#makeInput').val('').attr('disabled', 'disabled');
     $('#modelInput').val('').attr('disabled', 'disabled');
-    $('#parkingError').text(`* The garage has reached maximum capacity *`)
     // document.getElementById("parkingError").style.color = 'red'
     $('#addCarButton').attr('disabled', 'disabled');
   }
@@ -121,6 +120,6 @@ function totalPrice() {
 function animate() {
   if (garage.length <= maxSpots) {
     document.getElementById('carParkedNotice').classList.add('element');
-    $('#carParkedNotice').text('* Congratulations You Have Successfully Parked Your Car! *')
+    $('#carParkedNotice').text(' Congratulations You Have Successfully Parked Your Car! ')
   }
 }

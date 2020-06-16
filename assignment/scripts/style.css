@@ -5,52 +5,6 @@ html {
 body{
     font-family: 'Oswald', sans-serif;    
 }
-#header {
-    font-family: 'Oswald', sans-serif;
-    color: #000000;
-    text-align: center;
-    margin-bottom: -50px;
-}
-#allThingsCarContainer {
-    /* background: white;
-    opacity: .7; */
-    
-    border-radius: 10px;
-    padding: 32px;
-    width: 60%;
-    margin: auto;
-}
-#formTitle{
-    color: black;
-    text-align: center;
-    border-radius: 10px;
-    border: solid  black 3px;
-    font-size: 25px;
-    padding: 10px;
-    background-color: white;
-    width: fit-content;    
-    margin: auto;   
-    margin-bottom: -30px;
-}
-#formContainer{
-    text-align: center;
-}
-#addCarButton {
-    margin-top: 5px;
-    font-family: 'Oswald', sans-serif;
-    background: white;
-    color: #000000;
-    border-radius: 5px;
-    border-radius: 10px;
-    border: solid grey 2px;
-}
-input {
-    font-family: 'Oswald', sans-serif;
-    background: white;
-    border-radius: 5px;
-    border: solid  black 2px;
-
-}
 #parkedCarsAndMaxCapacity{
     text-align: center;
     align-content: center;
@@ -60,13 +14,72 @@ input {
     background: white;
     padding: 0px 20px;
     width: fit-content;
-   
 }
 #parkedCarSide {
 color: royalblue;
 }
 #maxCapacitySide {
 color:orange
+}
+#carParkedNotice {
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: -40px;
+}
+.element {
+    width: 100%;
+    height: 100%;
+    animation: pulse 5s infinite;
+}
+@keyframes pulse {
+    0% {
+      background-color: #001F3F;
+    }
+    100% {
+      background-color: #FF4136;
+    }
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+#formError {
+    /* text-align: center; */
+    color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: white;
+    width: fit-content;  
+    margin: auto;  
+    /* -webkit-text-stroke: .5px red; */
+    /* This webkit outlines the text */
+}
+#allThingsCarContainer {
+    /* background: white;
+    opacity: .7; */
+    border-radius: 10px;
+    padding: 32px;
+    width: 60%;
+    margin: auto;
+}
+#formContainer{
+    text-align: center;
+}
+#addCarButton {
+    margin-top: 5px;
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    color: #000000;
+    border-radius: 10px;
+    border: solid grey 2px;
+}
+input{
+    font-family: 'Oswald', sans-serif;
+    background: white;
+    border-radius: 5px;
+    border: solid  black 2px;
 }
 img {
     width: 100px;
@@ -100,71 +113,7 @@ ul {
 #space {
     margin-left: 10px;
 }
-#formError {
-    /* background-color: white; */
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: white;
-    width: fit-content;    
-    margin: auto;   
-    margin-top: 20px;
 
-    /* -webkit-text-stroke: .5px red; */
-    }
-#parkingError {
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: white;
-    width: fit-content;    
-    margin: auto;   
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /* -webkit-text-stroke: .5px red; */
-
-}
-#inventoryListTitle {
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    border: solid  black 3px;
-    font-size: 25px;
-    padding: 10px;
-    background-color: white;
-    width: fit-content;    
-    margin: auto;   
-    margin-top: 20px;
-/* -webkit-text-stroke: .2px royalblue; */
-
-}
 #totalCostGreen{
     color: green
 }
-.element {
-    width: 100%;
-    height: 100%;
-    animation: pulse 5s infinite;
-  }
-  
-  @keyframes pulse {
-    0% {
-      background-color: #001F3F;
-    }
-    100% {
-      background-color: #FF4136;
-    }
-  }
-  
-  html,
-  body {
-    height: 100%;
-  }
-  #carParkedNotice {
-      color: white;
-      border-radius: 10px;
-      margin-top: 20px;
-      padding: 10px
-  }

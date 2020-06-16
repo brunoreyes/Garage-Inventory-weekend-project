@@ -7,23 +7,17 @@
 </head>
 
 <body>
-  <div id="header">
-    <h1>Week 6 Tier 1 Assignment</h1>
+  <header><span id="carParkedNotice"></span>
+    <span id="formError"></span><br></header>
+  <div id="formContainer">
+    <input type="url" placeholder="Image Url" id="imageUrlInput">
+    <input type="number" placeholder="Price" id="priceInput">
+    <input type="text" placeholder="Year" id="yearInput">
+    <input type="text" placeholder="Make" id="makeInput">
+    <input type="text" placeholder="Model" id="modelInput">
+    <button id="addCarButton" disabled="disabled">Add Car</button>
   </div>
   <div id="allThingsCarContainer">
-    <div id="formContainer">
-      <span id="carParkedNotice"></span><br><br>
-      <h2 id="formTitle">Park Car</h2>
-      <span id="carParkedNotice"></span><br><br>
-      <input type="url" placeholder="Image Url" id="imageUrlInput">
-      <input type="number" placeholder="Price" id="priceInput">
-      <input type="text" placeholder="Year" id="yearInput">
-      <input type="text" placeholder="Make" id="makeInput">
-      <input type="text" placeholder="Model" id="modelInput">
-      <button id="addCarButton" disabled="disabled">Add Car</button>
-      <p id="formError" class="error"></p>
-      <p id="parkingError" class="error"></p>
-    </div>
     <div id="parkedCarsAndMaxCapacity">
       <h3 id="ratio">
         <span id="parkedCarSide">Parked Cars <span id="parkedCarsNumber"></span></span> /
@@ -31,10 +25,9 @@
         <span id=space></span> <span id=totalCostGreen> Total Cost : <span id="totalCarCost"></span></span>
       </h3>
     </div>
-    <h3 id="inventoryListTitle">Inventory List</h3>
-    <ul id="carsOutput">
-    </ul>
   </div>
+  <ul id="carsOutput">
+  </ul>
 </body>
 <script src="jQuery.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
