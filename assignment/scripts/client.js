@@ -1,6 +1,22 @@
 let garage = [];
 $(document).ready(readyNow);
 const maxSpots = 4;
+
+function readyNow() {
+  //readyNow should: 1.display parkedcars( year,make,model)
+  let el = $('#carsOutput');
+  //2. target id: carsOutput
+  el.empty();
+  el.append();
+  //With append I am inserting specified content at
+  //the end of statements
+  $('#addCarButton').on('click', addCar);
+  $('#addCarButton').on('click', animate);
+  //when id: addPurchaseButton is clicked we addCar
+  //addCar is 
+  displayGarageCars();
+};//end readyNow
+
 function newCar(pictureInput, priceInput, yearInput, makeInput, modelInput) {
   console.log('in newCar:', pictureInput, priceInput, yearInput, makeInput, modelInput);
   const newCarObject = {
@@ -53,20 +69,7 @@ function displayGarageCars() {
   $('#maxCapacityNumber').text(maxSpots)
 }//end displayGarageCars
 
-function readyNow() {
-  //readyNow should: 1.display parkedcars( year,make,model)
-  let el = $('#carsOutput');
-  //2. target id: carsOutput
-  el.empty();
-  el.append();
-  //With append I am inserting specified content at
-  //the end of statements
-  $('#addCarButton').on('click', addCar);
-  $('#addCarButton').on('click', animate);
-  //when id: addPurchaseButton is clicked we addCar
-  //addCar is 
-  displayGarageCars();
-};//end readyNow
+
 
 $('input').keyup(function () {
   // .keyup is activated when a key is pressed and released, the function with

@@ -1,119 +1,119 @@
-html { 
-    background: url("https://tinyurl.com/yacwo7ya") no-repeat center center fixed; 
-    background-size: cover;
+html {
+  background: url("https://tinyurl.com/yacwo7ya") no-repeat center center fixed;
+  background-size: cover;
 }
-body{
-    font-family: 'Oswald', sans-serif;    
+body {
+  font-family: "Oswald", sans-serif;
 }
-#parkedCarsAndMaxCapacity{
-    text-align: center;
-    align-content: center;
-    border-radius: 10px;
-    border: solid   3px;
-    margin: auto;
-    background: white;
-    padding: 0px 20px;
-    width: fit-content;
+#parkedCarsAndMaxCapacity {
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+  border: solid 3px;
+  /* margin: auto; */
+  background: white;
+  padding: 0px 20px;
+  width: fit-content;
 }
 #parkedCarSide {
-color: royalblue;
+  color: royalblue;
 }
 #maxCapacitySide {
-color:orange
+  color: orange;
 }
 #carParkedNotice {
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: -40px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: -40px;
 }
 .element {
-    width: 100%;
-    height: 100%;
-    animation: pulse 5s infinite;
+  width: 100%;
+  height: 100%;
+  animation: pulse 5s infinite;
 }
 @keyframes pulse {
-    0% {
-      background-color: #001F3F;
-    }
-    100% {
-      background-color: #FF4136;
-    }
+  0% {
+    background-color: #001f3f;
+  }
+  100% {
+    background-color: #ff4136;
+  }
 }
 header {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 #formError {
-    /* text-align: center; */
-    color: black;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: white;
-    width: fit-content;  
-    margin: auto;  
-    /* -webkit-text-stroke: .5px red; */
-    /* This webkit outlines the text */
+  /* text-align: center; */
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  /* -webkit-text-stroke: .5px red; */
+  /* This webkit outlines the text */
 }
 #allThingsCarContainer {
-    /* background: white;
+  /* background: white;
     opacity: .7; */
-    border-radius: 10px;
-    padding: 32px;
-    width: 60%;
-    margin: auto;
+  border-radius: 10px;
+  padding: 32px;
+  width: 60%;
+  margin: auto;
 }
-#formContainer{
-    text-align: center;
+#formContainer {
+  text-align: center;
 }
 #addCarButton {
-    margin-top: 5px;
-    font-family: 'Oswald', sans-serif;
-    background: white;
-    color: #000000;
-    border-radius: 10px;
-    border: solid grey 2px;
+  margin-top: 5px;
+  font-family: "Oswald", sans-serif;
+  background: white;
+  color: #000000;
+  border-radius: 10px;
+  border: solid grey 2px;
 }
-input{
-    font-family: 'Oswald', sans-serif;
-    background: white;
-    border-radius: 5px;
-    border: solid  black 2px;
+input {
+  font-family: "Oswald", sans-serif;
+  background: white;
+  border-radius: 5px;
+  border: solid black 2px;
 }
 img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 #carsOutput {
-    color: white;
+  color: white;
 }
-li{
-    background: white;
-    border-radius: 10px;
-    border: solid  black 3px;
-    color: #000000;
-    margin: 10px ;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1px 10px
+li {
+  background: white;
+  border-radius: 10px;
+  border: solid black 3px;
+  color: #000000;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1px 10px;
 }
 ul {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
 }
 #money {
-    color: green;
+  color: green;
 }
 #space {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
-#totalCostGreen{
-    color: green
+#totalCostGreen {
+  color: green;
 }
